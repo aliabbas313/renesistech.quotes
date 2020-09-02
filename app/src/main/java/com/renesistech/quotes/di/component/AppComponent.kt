@@ -1,6 +1,6 @@
 package com.renesistech.quotes.di.component
 
-import android.app.Application
+import com.renesistech.quotes.Application
 import com.renesistech.quotes.di.module.ActivityBuildersModule
 import com.renesistech.quotes.di.module.AppModule
 import com.renesistech.quotes.di.module.FragmentBuildersModule
@@ -27,7 +27,7 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(igiApp: Application)
+    fun inject(app: Application)
 
 
 }

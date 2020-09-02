@@ -1,11 +1,11 @@
 package com.renesistech.quotes.di.injection
 
 import android.app.Activity
-import android.app.Application
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import com.renesistech.quotes.Application
 import com.renesistech.quotes.di.component.DaggerAppComponent
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
@@ -15,7 +15,8 @@ object AppInjector {
         DaggerAppComponent.builder().application(app)
             .build().inject(app)
         app
-            .registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
+            .registerActivityLifecycleCallbacks(object :
+                android.app.Application.ActivityLifecycleCallbacks {
                 override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
                     handleActivity(activity)
                 }

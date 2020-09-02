@@ -17,12 +17,16 @@
 package com.renesistech.quotes.di.module
 
 import com.renesistech.quotes.mvp.view.MainActivity
+import com.renesistech.quotes.mvp.view.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Suppress("unused")
 @Module
 abstract class ActivityBuildersModule {
+
+    @ContributesAndroidInjector
+    abstract fun contributeSplashActivity(): SplashActivity
 
     @ContributesAndroidInjector
     abstract fun contributeMainActivity(): MainActivity

@@ -10,7 +10,7 @@ private const val BASE_URL = BuildConfig.URL_BASE + "/api"
 
 interface ApiService {
 
-    @GET("$BASE_URL/api/v2/quotes")
+    @GET("$BASE_URL/v2/quotes")
     fun getAllQuotes(
         @Query("page") page: Int,
         @Query("limit") limit: Int): Observable<BaseModel<QuotesResponse>>

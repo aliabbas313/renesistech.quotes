@@ -6,9 +6,14 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.renesistech.quotes.di.injection.AppInjector
 import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
 class Application : MultiDexApplication(), HasActivityInjector {
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         instance = this
@@ -17,9 +22,8 @@ class Application : MultiDexApplication(), HasActivityInjector {
         AppInjector.init(this)
     }
 
-    override fun activityInjector(): AndroidInjector<Activity> {
-        TODO("Not yet implemented")
-    }
+    override fun activityInjector() = dispatchingAndroidInjector
+
 
     companion object {
         private var instance: Application? = null
