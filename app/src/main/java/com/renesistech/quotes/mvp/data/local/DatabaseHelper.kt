@@ -99,6 +99,13 @@ class DatabaseHelper constructor(@ApplicationContext context: Context) : SQLiteO
         res.moveToFirst()
         return res
     }
+
+    fun clearAllQuotes(): Cursor? {
+        val db = this.readableDatabase
+        val res = db.rawQuery("delete from  QUOTES", null)
+        res.moveToFirst()
+        return res
+    }
     fun insertReplaceQuote(
         _id: String?,
         quoteText: String?,

@@ -11,14 +11,16 @@
     app:layout_constraintRight_toRightOf="parent">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/background"
+        android:id="@+id/ic_back"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/round_corner"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_fragment1"
@@ -27,8 +29,8 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginLeft="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        android:textSize="@dimen/_12ssp"
-        android:textColor="#FF8798AD"
+        android:textSize="@dimen/_23ssp"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,8 +43,8 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginRight="@dimen/_12sdp"
-        android:textColor="#FF3BA8F8"
-        android:textSize="@dimen/_12ssp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_24ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tv_fragment3"
@@ -55,16 +57,15 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:includeFontPadding="false"
-        android:textColor="#4A4A4A"
-        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_25ssp"
         android:layout_marginBottom="@dimen/_12sdp"
         android:layout_marginLeft="@dimen/_12sdp"
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginRight="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/tv_fragment2"
-        app:layout_constraintStart_toStartOf="@+id/tv_fragment1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fragment1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

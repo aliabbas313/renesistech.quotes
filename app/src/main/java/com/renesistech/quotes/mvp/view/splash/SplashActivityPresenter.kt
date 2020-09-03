@@ -46,6 +46,8 @@ constructor(
 
                         it.let { ti ->
                             ti.quotes.let { data ->
+                                databaseHelper.clearAllQuotes()
+
                                 for (item in data) {
                                     databaseHelper.insertQuote(item.id, item.quoteText, item.quoteAuthor)
                                 }
