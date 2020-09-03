@@ -92,14 +92,6 @@ class AppModule {
     @Singleton
     internal fun provideContext(application: Application): Context = application
 
-//    @Provides
-//    @Singleton
-//    internal fun providePrefHelper(preferencesHelper: PreferencesHelper): PreferencesHelper = preferencesHelper
-//
-//    @Provides
-//    @Singleton
-//    internal fun provideApiHelper(apiService: ApiService): ApiService = apiService
-
     @Provides
     internal fun provideCompositeDisposable(): CompositeDisposable = CompositeDisposable()
 

@@ -13,7 +13,7 @@ constructor(var mPreferencesHelper: PreferencesHelper, var iApiService: ApiServi
 
     var data: String? = null
 
-    fun getAllQuotes(page: Int, limit: Int): Observable<BaseModel<QuotesResponse>> {
+    fun getAllQuotes(page: Int, limit: Int): Observable<BaseModel> {
 
         return iApiService.getAllQuotes(page, limit)
     }

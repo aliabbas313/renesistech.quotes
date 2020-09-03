@@ -13,6 +13,6 @@ interface ApiService {
     @GET("$BASE_URL/v2/quotes")
     fun getAllQuotes(
         @Query("page") page: Int,
-        @Query("limit") limit: Int): Observable<BaseModel<QuotesResponse>>
+        @Query("limit") limit: Int): Observable<BaseModel>
 
 }

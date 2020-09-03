@@ -1,19 +1,18 @@
 package com.renesistech.quotes
 
-import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.renesistech.quotes.di.injection.AppInjector
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
+import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class Application : MultiDexApplication(), HasActivityInjector {
+class Application : MultiDexApplication(), HasAndroidInjector {
 
     @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
     override fun onCreate() {
         instance = this
@@ -22,8 +21,7 @@ class Application : MultiDexApplication(), HasActivityInjector {
         AppInjector.init(this)
     }
 
-    override fun activityInjector() = dispatchingAndroidInjector
-
+    override fun androidInjector(): AndroidInjector<Any>? = dispatchingAndroidInjector
 
     companion object {
         private var instance: Application? = null
@@ -36,4 +34,5 @@ class Application : MultiDexApplication(), HasActivityInjector {
             return instance
         }
     }
+
 }

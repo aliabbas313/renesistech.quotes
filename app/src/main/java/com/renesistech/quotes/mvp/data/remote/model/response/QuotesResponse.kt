@@ -5,5 +5,5 @@ import com.renesistech.quotes.mvp.data.remote.model.response.Quote
 
 data class QuotesResponse(
     @SerializedName("quotes")
-    val quotes: List<Quote>
+    var quotes: List<Quote>
 )

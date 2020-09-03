@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class Quote(
     @SerializedName("_id")
-    val id: String,
+    var id: String,
     @SerializedName("quoteAuthor")
-    val quoteAuthor: String,
+    var quoteAuthor: String,
     @SerializedName("quoteText")
-    val quoteText: String
+    var quoteText: String
 )

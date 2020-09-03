@@ -6,12 +6,14 @@ import com.renesistech.quotes.mvp.view.base.BaseInterfaces
 
 interface SplashInterfaces {
 
-    interface SplashView : BaseInterfaces.BaseView {
-        fun showData(data: BaseModel<QuotesResponse>)
-        fun showError(error: String)
-    }
-
     interface SplashPresenter<T> {
         fun getAllQuotes(page: Int, limit: Int)
+    }
+
+    interface SplashView : BaseInterfaces.BaseView {
+        fun hideActionBar()
+        fun delayedHide(delayMillis: Int)
+        fun showData(data: BaseModel)
+        fun showError(error: String)
     }
 }

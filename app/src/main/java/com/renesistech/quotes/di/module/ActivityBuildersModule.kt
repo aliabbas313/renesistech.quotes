@@ -16,7 +16,7 @@
 
 package com.renesistech.quotes.di.module
 
-import com.renesistech.quotes.mvp.view.MainActivity
+import com.renesistech.quotes.mvp.view.main.MainActivity
 import com.renesistech.quotes.mvp.view.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
